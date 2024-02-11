@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Importing all the stylesheets-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <!-- Importing external stylesheets and font awesome icon library -->
+    <link rel="stylesheet" href="./common_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="careers_styles.css">
+    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <!--Logos and header items-->
+            <a href="./main.html">
+            <img src="./img/logo-white.png" alt="">
+            </a>
+        </div>
+        <!-- Logo and navigation links -->
+        <ul class="nav" id="nav">
+            <ul class="navLogo">
+                <a href="./main.html">
+                     <img src="./img/logo-white.png" alt="">
+               </a>
+            </ul>
+
+            <!-- Navigation menu with links and social icons -->
+            <li class="nav-link"><a href="main.html">Home</a></li>
+            <li class="nav-link"><a href="./benefits.html">Benefits</a></li>
+            <li class="nav-link"><a href="./careers.html">Jobs</a></li>
+            <li class="sociallinkContainer">
+                <!-- Navigation links and social icons -->
+                <img class="sociallink" src="./img/fabook-icon-white.svg" alt="">
+                <img class="sociallink" src="./img/twitter-icon-white.svg" alt="">
+                <img class="sociallink" src="./img/inkedin-icon-white.svg" alt="">
+                <img class="sociallink" src="./img/whatsapp-icon-white.svg" alt="">
+            </li>
+        </ul>
+        <!-- Hamburger icon for mobile navigation -->
+        <div id="barContainer">
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- aboutus hero  -->
+    <section class="gridSection">
+        <!-- Description and image for the about us section -->
+        <div class="sectionDesc aboutusDesc">
+            <h1 class="headline">
+                Rocky Turbines
+            </h1>
+            <p class="sub-headline">
+                Discover a workplace that values your well-being and work-life balance. With our generous time-off policy, flexible work areas, and complimentary daily meals, we prioritize your comfort and productivity. Additionally, enjoy top-notch healthcare, inclusive retirement plans, and comprehensive insurance coverage—your holistic well-being is at the core of our benefits package.
+            </p>
+        </div>
+        <div class="aboutusPic" id="sectionPic">
+            <img src="work.svg" alt="">
+        </div>
+    </section>
+
+    <!-- Filters for job search -->
+    <div id="filters">
+        <!-- Salary filter dropdown -->
+        <label for="salaryFilter">Range:&nbsp;&nbsp;</label>
+        <select id="salaryFilter">
+            <!-- Options for different salary ranges -->
+            <option value="select" selected disabled hidden>Select Option</option>
+            <option value="0-10000">$0 - $10,000</option>
+            <option value="10000-20000">$10,000 - $20,000</option>
+            <option value="20000-30000">$20,000 - $30,000</option>
+            <option value="20000-30000">$20,000 - $30,000</option>
+            <option value="30000-40000">$30,000 - $40,000</option>
+            <option value="40000-50000">$40,000 - $50,000</option>
+            <option value="50000-60000">$50,000 - $60,000</option>
+            <option value="60000-70000">$60,000 - $70,000</option>
+            <option value="70000-80000">$70,000 - $80,000</option>
+            <option value="80000-90000">$80,000 - $90,000</option>
+            <option value="90000-100000">$90,000 - $100,000</option>
+            <option value="100000-200000">$100,000 - $200,000</option>
+            <option value="200000-300000">$200,000 - $300,000</option>
+            <option value="300000-400000">$300,000 - $400,000</option>
+            
+        </select>
+    
+        <!-- Location filter dropdown -->
+        <label for="locationFilter">Location:&nbsp;&nbsp;</label>
+        <select id="locationFilter">
+            <option value="select1">Select Option</option>
+            <option value="Remote">Remote</option>
+            <option value="Seattle">Seattle, WA</option>
+            
+        </select>
+    
+        <!-- Experience filter dropdown -->
+        <label for="experienceFilter">Experience:&nbsp;&nbsp; </label>
+        <select id="experienceFilter">
+            <option value="select2">Select Option</option>
+            <option value="0-2">0-2 years</option>
+            <option value="2-5">2-5 years</option>
+            <option value="5+">5+ years</option>
+        </select>
+    </div>
+    
+    <!-- Job container with job cards and details -->
+    <!-- Job details section -->
+    <div id="jobContainer">
+        <!-- Job carousel with individual job cards -->
+        <div id="jobCarousel">
+            <div class="jobCard" data-salary="50000-60000" data-location="Remote" data-experience="1-2" onclick="populateJobDetails(windTurbineTechnician)">
+                <div class="jobDescription">Wind Turbine Technician</div>
+                <div class="jobDescription">Salary: $50,000 to $60,000</div>
+                <div class="jobDescription">1-2 Years of Experience</div>
+                <div class="jobTagsContainer jobTags">Location: Remote</div>
+            </div>
+            
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="100000-200000" data-location="Remote" data-experience="2-5" onclick="populateJobDetails(windTurbineEngineer)">
+                <div class="jobDescription">Wind Turbine Engineer</div>
+                <div class="jobDescription">Salary: $100,000 to $200,000</div>
+                <div class="jobDescription">Experience: 2-5 Years</div>
+                <div class="jobTagsContainer jobTags">Location: Remote</div>
+            </div>
+            
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="100000-200000" data-location="Seattle" data-experience="5-8" onclick="populateJobDetails(projectManagerWindEnergy)">
+                <div class="jobDescription">Project Manager - Wind Energy</div>
+                <div class="jobDescription">Salary: $100,000 to $200,000</div>
+                <div class="jobDescription">Experience: 5-8 years</div>
+                <div class="jobTagsContainer jobTags">Location: Seattle, WA</div>
+            </div>
+            
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="70000-80000" data-location="Seattle" data-experience="3-5" onclick="populateJobDetails(environmentalRegulatorySpecialist)">
+                <div class="jobDescription">Environment Regulations Specialist</div>
+                <div class="jobDescription">Salary: $70,000 to $80,000</div>
+                <div class="jobDescription">Experience: 3-5 years</div>
+                <div class="jobTagsContainer jobTags">Location: Seattle, WA</div>
+            </div>
+            
+          <!-- Job details in the card -->  
+            <div class="jobCard" data-salary="80000-90000" data-location="Seattle" data-experience="2-4" onclick="populateJobDetails(dataAnalystWindEnergy)">
+                <div class="jobDescription">Data Analyst - Wind Energy</div>
+                <div class="jobDescription">Salary: $80,000 to $90,000</div>
+                <div class="jobDescription">Experience: 2-4 Years</div>
+                <div class="jobTagsContainer jobTags">Location: Remote</div>
+            </div>
+            
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="70000-80000" data-location="Seattle" data-experience="2-5" onclick="populateJobDetails(qualityControlInspector)">
+                <div class="jobDescription">Quality Control Inspector</div>
+                <div class="jobDescription">Salary: $70,000 to $80,000</div>
+                <div class="jobDescription">Experience: 2-5 Years</div>
+                <div class="jobTagsContainer jobTags">Location: Seattle, WA</div>
+            </div>
+            
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="100000-200000" data-location="Remote" data-experience="2-5" onclick="populateJobDetails(softwareEngineer)">
+                <div class="jobDescription">Software Engineer</div>
+                <div class="jobDescription">Salary: $100,000 to $200,000</div>
+                <div class="jobDescription">Experience: 2-5 Years</div>
+                <div class="jobTagsContainer jobTags">Location: Remote</div>
+            </div>
+            
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="60000-70000" data-location="Remote" data-experience="2-5" onclick="populateJobDetails(meteorologist)">
+                <div class="jobDescription">Meteorologist</div>
+                <div class="jobDescription">Salary: $60,000 to $70,000</div>
+                <div class="jobDescription">Experience: 2-5 Years</div>
+                <div class="jobTagsContainer jobTags">Location: Remote</div>
+            </div>
+            <!-- Job details in the card -->
+            <div class="jobCard" data-salary="100000-200000" data-location="Remote" data-experience="5+" onclick="populateJobDetails(aerodynamicsEngineer)">
+                <div class="jobDescription">Aerodynamics Engineer</div>
+                <div class="jobDescription">Salary: $100,000 to $200,000</div>
+                <div class="jobDescription">Experience: 3-7 Years</div>
+                <div class="jobTagsContainer jobTags">Location: Seattle, WA</div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    
+        <!-- Application form section -->
+        <div id="jobDetails">
+            <div id="jobDescription">
+                <!-- Close button and application form -->
+                <h1 id="jobTitle">Job Title</h1>
+                <details>
+                    <summary>Job Details</summary>
+                    <ul id="jobDescriptionsList"></ul>
+                </details>
+                <div id="jobTags"></div>
+                <p id="jobExperience"><h2>Experience: </h2><span id="experiencePlaceholder"></span></p>
+                <p id="jobDegree"><h2>Degree:</h2><span id="degreePlaceholder"></span></p>
+                <p id="jobResponsibilities"><h2>Responsibilities:</h2> <span id="responsibilitiesPlaceholder"></span></p>
+                <p id="jobRequirements"><h2>Requirements:</h2> <span id="requirementsPlaceholder"></span></p>
+                <p id="jobBenefits"><h2>Benefits:</h2><span id="benefitsPlaceholder"></span></p>
+                <button onclick="openApplicationForm()">Apply Now</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div id="applicationForm">
+        <span id="exitButton" onclick="closeApplicationForm()">✕</span>
+        <form onsubmit="submitApplication(event)">
+    
+            <div id="progressBarContainer">
+                <label for="progressBar">Progress:</label>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+    
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+    
+            <label for="startMonth">When You Can Start Work:</label>
+            <select id="startMonth" name="startMonth">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+                <!-- Add other months as needed -->
+            </select>
+    
+    
+            <label for="workPreference">Work Preference:</label>
+            <select id="workPreference" name="workPreference">
+                <option value="">--select--</option>
+                <option value="home">Work from Home</option>
+                <option value="office">Work from Office</option>
+            </select>
+    
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" onchange="updateResumePreview()" accept=".pdf,.doc,.docx">
+            <img id="resumeImage" src="#" alt="Resume Preview">
+    
+            <label for="extraSkills">Extra Skills:</label>
+            <textarea id="extraSkills" name="extraSkills" rows="4" cols="50"></textarea>
+    
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea>
+    
+    
+    
+    
+            <div id="salaryDisplay">
+                <label for="salaryFilter">Salary Range:</label>
+                <span id="salaryAmount">$0 - $10,000</span>
+            </div>
+    
+            <button onclick="submitApplication(event)">Submit Application</button>
+        </form>
+    </div>
+
+    <footer>
+       
+
+        <div class="footerlinksContainer">
+            <div class="footerAboutus">
+                <img src="./img/logo-white.png" alt="">
+                <p class="darkPara">At Rocky Turbines, we are pioneering sustainable power with cutting-edge turbines, we drive innovation for a cleaner, greener future in clean energy solutions.
+                </p>
+                <div class="footersociallinkContainer">
+                    <img class="sociallink" src="./img/fabook-icon-white.svg" alt="">
+                    <img class="sociallink" src="./img/twitter-icon-white.svg" alt="">
+                    <img class="sociallink" src="./img/inkedin-icon-white.svg" alt="">
+                    <img class="sociallink" src="./img/whatsapp-icon-white.svg" alt="">
+                </div>
+            </div>
+
+            <div class="footerlink">
+                <h1 class="linkTitle">Home</h1>
+                <a href="#" class="eachLink">About us</a>
+                <a href="#" class="eachLink">Contact</a>
+            </div>
+
+            <div class="footerlink">
+                <h1 class="linkTitle">Jobs</h1>
+                <a href="#" class="eachLink">Metreologist</a>
+                <a href="#" class="eachLink">Aerodynamics Engineer</a>
+                <a href="#" class="eachLink">Data Analyst</a>
+                <a href="#" class="eachLink">Wind Turbine Engineer</a>
+            </div>
+
+            <div class="footerlink">
+                <h1 class="linkTitle">Benefits</h1>
+                <a href="#" class="eachLink">Food</a>
+                <a href="#" class="eachLink">Vacations</a>
+                <a href="#" class="eachLink">Work from Home Options</a>
+            </div>
+        </div>
+
+        <div class="footerCopyright">
+             <p>719-748-8829 | Colorado Springs, CO | 12473 Red Rocks Dr.
+        </div>
+    </footer>
+    
+    <script src="./careers_script.js"></script>
+</body>
+</html>
